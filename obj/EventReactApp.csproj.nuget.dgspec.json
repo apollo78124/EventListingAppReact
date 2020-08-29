@@ -41,6 +41,18 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "JavaScriptEngineSwitcher.V8": {
+              "target": "Package",
+              "version": "[3.5.5, )"
+            },
+            "JavaScriptEngineSwitcher.V8.Native.win-x64": {
+              "target": "Package",
+              "version": "[3.5.5, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -52,11 +64,23 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "React.AspNet": {
+              "target": "Package",
+              "version": "[5.2.8, )"
             }
           },
           "imports": [

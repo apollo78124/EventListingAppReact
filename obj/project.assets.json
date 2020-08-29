@@ -2,6 +2,93 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "AdvancedStringBuilder/0.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {}
+        }
+      },
+      "JavaScriptEngineSwitcher.Core/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll": {
+            "locale": "ru-ru"
+          }
+        }
+      },
+      "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "JavaScriptEngineSwitcher.Core": "3.3.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll": {}
+        }
+      },
+      "JavaScriptEngineSwitcher.V8/3.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45/ClearScript.dll": {},
+          "lib/net45/JavaScriptEngineSwitcher.V8.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ClearScript.dll": {},
+          "lib/net45/JavaScriptEngineSwitcher.V8.dll": {}
+        },
+        "resource": {
+          "lib/net45/ru-ru/JavaScriptEngineSwitcher.V8.resources.dll": {
+            "locale": "ru-ru"
+          }
+        }
+      },
+      "JavaScriptEngineSwitcher.V8.Native.win-x64/3.5.5": {
+        "type": "package",
+        "build": {
+          "build/net45/JavaScriptEngineSwitcher.V8.Native.win-x64.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/v8-base-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/v8-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/v8-zlib-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "JSPool/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "JavaScriptEngineSwitcher.Core": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/JSPool.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JSPool.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -1694,7 +1781,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/2.2.0": {
+      "Microsoft.EntityFrameworkCore.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
@@ -1703,8 +1790,14 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/2.2.0": {
-        "type": "package"
+      "Microsoft.EntityFrameworkCore.Analyzers/3.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
       },
       "Microsoft.EntityFrameworkCore.Design/2.2.0": {
         "type": "package",
@@ -2724,7 +2817,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -2744,6 +2837,52 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "React.AspNet/5.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "React.AspNet.Middleware": "5.2.8",
+          "React.Core": "5.2.8"
+        },
+        "compile": {
+          "lib/netstandard2.0/React.AspNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/React.AspNet.dll": {}
+        }
+      },
+      "React.AspNet.Middleware/5.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.StaticFiles": "2.2.0",
+          "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.2.0",
+          "React.Core": "5.2.8"
+        },
+        "compile": {
+          "lib/netstandard2.0/React.AspNet.Middleware.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/React.AspNet.Middleware.dll": {}
+        }
+      },
+      "React.Core/5.2.8": {
+        "type": "package",
+        "dependencies": {
+          "JSPool": "4.0.0",
+          "JavaScriptEngineSwitcher.Core": "3.1.0",
+          "Microsoft.Extensions.DependencyModel": "2.1.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/React.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/React.Core.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -4442,6 +4581,144 @@
     }
   },
   "libraries": {
+    "AdvancedStringBuilder/0.1.0": {
+      "sha512": "IbN3r5whlJvi8MhCDPVpIb+NVScyUcKSdcJZrnoXFDyzPDISl3AbWouNBYIHRdZdfGuzqCQEhM1vkxbIKqQVaQ==",
+      "type": "package",
+      "path": "advancedstringbuilder/0.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "advancedstringbuilder.0.1.0.nupkg.sha512",
+        "advancedstringbuilder.nuspec",
+        "lib/net40-client/AdvancedStringBuilder.dll",
+        "lib/net40-client/AdvancedStringBuilder.xml",
+        "lib/net45/AdvancedStringBuilder.dll",
+        "lib/net45/AdvancedStringBuilder.xml",
+        "lib/netstandard1.0/AdvancedStringBuilder.dll",
+        "lib/netstandard1.0/AdvancedStringBuilder.xml",
+        "lib/netstandard2.0/AdvancedStringBuilder.dll",
+        "lib/netstandard2.0/AdvancedStringBuilder.xml"
+      ]
+    },
+    "JavaScriptEngineSwitcher.Core/3.3.0": {
+      "sha512": "aY5dOsBsB7MO2twVRlRcvHBFdkXptIwjSobjPis+DiUi5Cq2YU6M8ICHzaQ1ZXHl7VyWrBMV7cTn98ZrI5ZMHQ==",
+      "type": "package",
+      "path": "javascriptengineswitcher.core/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "advanced-string-builder-license.txt",
+        "icon.png",
+        "javascriptengineswitcher.core.3.3.0.nupkg.sha512",
+        "javascriptengineswitcher.core.nuspec",
+        "lib/net40-client/JavaScriptEngineSwitcher.Core.dll",
+        "lib/net40-client/JavaScriptEngineSwitcher.Core.xml",
+        "lib/net40-client/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "lib/net45/JavaScriptEngineSwitcher.Core.dll",
+        "lib/net45/JavaScriptEngineSwitcher.Core.xml",
+        "lib/net45/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Core.dll",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Core.xml",
+        "lib/netstandard1.3/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.dll",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Core.xml",
+        "lib/netstandard2.0/ru-ru/JavaScriptEngineSwitcher.Core.resources.dll",
+        "readme.txt"
+      ]
+    },
+    "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection/3.3.0": {
+      "sha512": "3jGJS7bSzXN6r1ejDjfNP2noGJGJYkb5nyIsxn/dRqStGda7kHxFPI2ONMlnWdXyfhFl5CAlseLk37lb54+6Iw==",
+      "type": "package",
+      "path": "javascriptengineswitcher.extensions.msdependencyinjection/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "icon.png",
+        "javascriptengineswitcher.extensions.msdependencyinjection.3.3.0.nupkg.sha512",
+        "javascriptengineswitcher.extensions.msdependencyinjection.nuspec",
+        "lib/net45/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll",
+        "lib/net45/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.xml",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll",
+        "lib/netstandard1.3/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.xml",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll",
+        "lib/netstandard2.0/JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.xml",
+        "readme.txt"
+      ]
+    },
+    "JavaScriptEngineSwitcher.V8/3.5.5": {
+      "sha512": "fJBxwf45310eEZnz4fTE4psNMrR9iyLmixg1AF9nxy1fyBpA7+4PM/gkDSZk3nTw+XZ10MlHrDXCzEYuIHKNaQ==",
+      "type": "package",
+      "path": "javascriptengineswitcher.v8/3.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "advanced-string-builder-license.txt",
+        "clearscript-license.txt",
+        "icon.png",
+        "javascriptengineswitcher.v8.3.5.5.nupkg.sha512",
+        "javascriptengineswitcher.v8.nuspec",
+        "lib/net45/ClearScript.dll",
+        "lib/net45/ClearScript.xml",
+        "lib/net45/JavaScriptEngineSwitcher.V8.dll",
+        "lib/net45/JavaScriptEngineSwitcher.V8.xml",
+        "lib/net45/ru-ru/JavaScriptEngineSwitcher.V8.resources.dll",
+        "lib/netcoreapp3.1/ClearScript.dll",
+        "lib/netcoreapp3.1/ClearScript.xml",
+        "lib/netcoreapp3.1/JavaScriptEngineSwitcher.V8.dll",
+        "lib/netcoreapp3.1/JavaScriptEngineSwitcher.V8.xml",
+        "lib/netcoreapp3.1/ru-ru/JavaScriptEngineSwitcher.V8.resources.dll",
+        "readme.txt",
+        "v8-license.txt"
+      ]
+    },
+    "JavaScriptEngineSwitcher.V8.Native.win-x64/3.5.5": {
+      "sha512": "sjTIXTrtQf7fficIFYhi0TK/li3husNAWkXzq4igvdZNx7eVUNM4F5UAkANJGSjPf7m7Gw1nrFGBc4kTB8nOiw==",
+      "type": "package",
+      "path": "javascriptengineswitcher.v8.native.win-x64/3.5.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/net45/JavaScriptEngineSwitcher.V8.Native.win-x64.props",
+        "build/netcoreapp3.1/JavaScriptEngineSwitcher.V8.Native.win-x64.props",
+        "clearscript-license.txt",
+        "icon.png",
+        "javascriptengineswitcher.v8.native.win-x64.3.5.5.nupkg.sha512",
+        "javascriptengineswitcher.v8.native.win-x64.nuspec",
+        "readme.txt",
+        "runtimes/win-x64/lib/net45/ClearScriptV8-64.dll",
+        "runtimes/win-x64/lib/netcoreapp3.1/ClearScriptV8-64.dll",
+        "runtimes/win-x64/native/v8-base-x64.dll",
+        "runtimes/win-x64/native/v8-x64.dll",
+        "runtimes/win-x64/native/v8-zlib-x64.dll",
+        "tools/Install.ps1",
+        "tools/Uninstall.ps1",
+        "v8-license.txt"
+      ]
+    },
+    "JSPool/4.0.0": {
+      "sha512": "r+AeQ9R50HxU+HLqASYvZz6Mvg7RmZwEnCVhQ+xGYVexFjYYqlkW6by9HaflGaHjy+/28YLbb3qxDLRJ3AbZGQ==",
+      "type": "package",
+      "path": "jspool/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jspool.4.0.0.nupkg.sha512",
+        "jspool.nuspec",
+        "lib/net40-client/JSPool.dll",
+        "lib/net40-client/JSPool.xml",
+        "lib/net45/JSPool.dll",
+        "lib/net45/JSPool.xml",
+        "lib/netstandard1.3/JSPool.dll",
+        "lib/netstandard1.3/JSPool.xml",
+        "lib/netstandard2.0/JSPool.dll",
+        "lib/netstandard2.0/JSPool.xml"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -5898,28 +6175,31 @@
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/2.2.0": {
-      "sha512": "/js/H09B8MQGoPDFzJoaAealyL66g4vKf7DVcdBYcxgKztkttjZbRzSWKF9PZZFyfBl9Ia/BiStM70t7kjgMpg==",
+    "Microsoft.EntityFrameworkCore.Abstractions/3.1.7": {
+      "sha512": "Dx2aGjTKPq49nMYl8t9Lq9XgZJOSIsIQE7lOCThVyHHAYgZrkc8NRgzE/PLGfUO4tfyNSImkXlyF98DBAXI5fw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/2.2.0",
+      "path": "microsoft.entityframeworkcore.abstractions/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.3.1.7.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/2.2.0": {
-      "sha512": "/1rw3toRCal80Ch51lIjuf/0WfW9ZGB4eRY1y6GOcOoOvnMXXXt+4xMRw/0k0kIwHsWUNXUpw73jf40/Pe+ZYA==",
+    "Microsoft.EntityFrameworkCore.Analyzers/3.1.7": {
+      "sha512": "zSh3QF/Kz8fdVgyStQ1HYUGFDRqFbUR1UBpfa8tUuB0OutYab9R4aYdjkD8i9w9P5VZyHXqQNglh2cQHBFLtjg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/2.2.0",
+      "path": "microsoft.entityframeworkcore.analyzers/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
-        "microsoft.entityframeworkcore.analyzers.2.2.0.nupkg.sha512",
+        "lib/netstandard2.0/_._",
+        "microsoft.entityframeworkcore.analyzers.3.1.7.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -7336,10 +7616,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7362,8 +7642,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -7379,6 +7660,61 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "React.AspNet/5.2.8": {
+      "sha512": "RutuevilsagRNj5ZaEmDDCqvD2rt5uzsYbhgr8HzogTyhU/ZYqQVX0PHQnkAcXGLg+1Izr31HPNDXCsXPI4iNg==",
+      "type": "package",
+      "path": "react.aspnet/5.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/React.AspNet.dll",
+        "lib/netcoreapp3.0/React.AspNet.xml",
+        "lib/netstandard2.0/React.AspNet.dll",
+        "lib/netstandard2.0/React.AspNet.xml",
+        "logo_64.png",
+        "react.aspnet.5.2.8.nupkg.sha512",
+        "react.aspnet.nuspec"
+      ]
+    },
+    "React.AspNet.Middleware/5.2.8": {
+      "sha512": "Dvg27ZLVN9o9sWTWaPOu1jVVlXMud7skbXwkraIiDs0yHhEj650/t0zBSUYoh7Rt50IHUItWS1Ae5CjVlJIXvg==",
+      "type": "package",
+      "path": "react.aspnet.middleware/5.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/React.AspNet.Middleware.dll",
+        "lib/netcoreapp3.0/React.AspNet.Middleware.pdb",
+        "lib/netcoreapp3.0/React.AspNet.Middleware.xml",
+        "lib/netstandard2.0/React.AspNet.Middleware.dll",
+        "lib/netstandard2.0/React.AspNet.Middleware.pdb",
+        "lib/netstandard2.0/React.AspNet.Middleware.xml",
+        "logo_64.png",
+        "react.aspnet.middleware.5.2.8.nupkg.sha512",
+        "react.aspnet.middleware.nuspec"
+      ]
+    },
+    "React.Core/5.2.8": {
+      "sha512": "nTJjILQK/vru43Fm6UPdihrikY9ywtXft2qp3/mHdxlILy89mXLgo7ETQj3YEOvro1d21/PutSo0XAT811BG1g==",
+      "type": "package",
+      "path": "react.core/5.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/React.Core.dll",
+        "lib/net40/React.Core.pdb",
+        "lib/net40/React.Core.xml",
+        "lib/net45/React.Core.dll",
+        "lib/net45/React.Core.pdb",
+        "lib/net45/React.Core.xml",
+        "lib/netstandard2.0/React.Core.dll",
+        "lib/netstandard2.0/React.Core.pdb",
+        "lib/netstandard2.0/React.Core.xml",
+        "logo_64.png",
+        "react.core.5.2.8.nupkg.sha512",
+        "react.core.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -12121,9 +12457,15 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection >= 3.3.0",
+      "JavaScriptEngineSwitcher.V8 >= 3.5.5",
+      "JavaScriptEngineSwitcher.V8.Native.win-x64 >= 3.5.5",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.EntityFrameworkCore.Abstractions >= 3.1.7",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 3.1.7",
+      "Microsoft.NETCore.App >= 2.2.0",
+      "React.AspNet >= 5.2.8"
     ]
   },
   "packageFolders": {
@@ -12167,6 +12509,18 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection": {
+            "target": "Package",
+            "version": "[3.3.0, )"
+          },
+          "JavaScriptEngineSwitcher.V8": {
+            "target": "Package",
+            "version": "[3.5.5, )"
+          },
+          "JavaScriptEngineSwitcher.V8.Native.win-x64": {
+            "target": "Package",
+            "version": "[3.5.5, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12178,11 +12532,23 @@
             "target": "Package",
             "version": "[2.2.0, )"
           },
+          "Microsoft.EntityFrameworkCore.Abstractions": {
+            "target": "Package",
+            "version": "[3.1.7, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
+            "target": "Package",
+            "version": "[3.1.7, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "React.AspNet": {
+            "target": "Package",
+            "version": "[5.2.8, )"
           }
         },
         "imports": [
@@ -12198,5 +12564,47 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.AspNetCore.App 2.2.0 requires Microsoft.EntityFrameworkCore.Abstractions (>= 2.2.0 && < 2.3.0) but version Microsoft.EntityFrameworkCore.Abstractions 3.1.7 was resolved.",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.AspNetCore.App 2.2.0 requires Microsoft.EntityFrameworkCore.Analyzers (>= 2.2.0 && < 2.3.0) but version Microsoft.EntityFrameworkCore.Analyzers 3.1.7 was resolved.",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JavaScriptEngineSwitcher.V8 3.5.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "JavaScriptEngineSwitcher.V8",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JavaScriptEngineSwitcher.V8.Native.win-x64 3.5.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "JavaScriptEngineSwitcher.V8.Native.win-x64",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

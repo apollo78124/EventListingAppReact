@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AxAQofIIPy0AXNdYBc3vx8iXFesgpM0qnN2Bn5VBGrS8JfCNP4pej4okI+PPmInAaxwY0K/bjAjscQS7OHPOyQ==",
+  "dgSpecHash": "KdxeJrNcrIky/XPJpYG/9xVLFZ2y/3Yc3n+UQYjCdAo3bq/HVRz/yDzeNgo9J6Xe10beh2urTTJXUpxFIEl6hQ==",
   "success": true,
-  "projectFilePath": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp.csproj",
+  "projectFilePath": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",

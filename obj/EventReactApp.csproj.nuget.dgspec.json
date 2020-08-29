@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp.csproj": {}
+    "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp.csproj": {}
   },
   "projects": {
-    "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp.csproj": {
+    "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp.csproj",
+        "projectUniqueName": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp.csproj",
         "projectName": "EventReactApp",
-        "projectPath": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp.csproj",
+        "projectPath": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp.csproj",
         "packagesPath": "C:\\Users\\dldms\\.nuget\\packages\\",
-        "outputPath": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\EventReactApp\\obj\\",
+        "outputPath": "D:\\ReactProject\\EventReactApp\\EventReactApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

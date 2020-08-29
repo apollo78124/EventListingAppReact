@@ -21,14 +21,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -39,7 +39,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp3.1": {
           "dependencies": {
             "JavaScriptEngineSwitcher.Extensions.MsDependencyInjection": {
               "target": "Package",
@@ -53,16 +53,9 @@
               "target": "Package",
               "version": "[3.5.5, )"
             },
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
+            "JavaScriptEngineSwitcher.V8.Native.win-x86": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.5.5, )"
             },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
@@ -71,12 +64,6 @@
             "Microsoft.EntityFrameworkCore.Analyzers": {
               "target": "Package",
               "version": "[3.1.7, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
             },
             "React.AspNet": {
               "target": "Package",
@@ -93,6 +80,14 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }

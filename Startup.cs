@@ -29,22 +29,16 @@ namespace EventReactApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            
+            services.AddControllersWithViews();
+
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddReact();
 
             // Make sure a JS engine is registered, or you will get an error!
             services.AddJsEngineSwitcher(options => options.DefaultEngineName = V8JsEngine.EngineName)
               .AddV8();
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<ECubed_Net_React_DemoContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("ECubed_Net_React_DemoContext")));
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +55,7 @@ namespace EventReactApp
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            
 
             // Initialise ReactJS.NET. Must be before static files.
             app.UseReact(config =>
@@ -82,15 +76,19 @@ namespace EventReactApp
                 //  .SetLoadBabel(false)
                 //  .AddScriptWithoutTransform("~/js/bundle.server.js");
             });
-
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
 
-            app.UseMvc(routes =>
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
+                endpoints.MapControllerRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                );
             });
         }
     }

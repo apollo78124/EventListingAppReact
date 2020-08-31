@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VryMFtpdXOB6NB2r+IqC5YpO6bzajBadZqB/tbfIbXsd3N25ZsWEkzFdjS9a8I9gA26KsMA0VOFHfHXhjYPICg==",
+  "dgSpecHash": "DMld6RXCEj7meU503jMGvBwtKPPM/a7CP3Mbd6WFrQYfKQXMIeTzkaqMx11DnChelNhcPKtz0vcCJBmFJhOJgA==",
   "success": true,
   "projectFilePath": "D:\\ReactProject\\EventReactApp\\EventReactApp\\EventReactApp.csproj",
   "expectedPackageFiles": [
@@ -19,9 +19,9 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\dldms\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\dldms\\.nuget\\packages\\react.aspnet\\5.2.8\\react.aspnet.5.2.8.nupkg.sha512",
-    "C:\\Users\\dldms\\.nuget\\packages\\react.aspnet.middleware\\5.2.8\\react.aspnet.middleware.5.2.8.nupkg.sha512",
-    "C:\\Users\\dldms\\.nuget\\packages\\react.core\\5.2.8\\react.core.5.2.8.nupkg.sha512",
+    "C:\\Users\\dldms\\.nuget\\packages\\react.aspnet\\5.2.9\\react.aspnet.5.2.9.nupkg.sha512",
+    "C:\\Users\\dldms\\.nuget\\packages\\react.aspnet.middleware\\5.2.9\\react.aspnet.middleware.5.2.9.nupkg.sha512",
+    "C:\\Users\\dldms\\.nuget\\packages\\react.core\\5.2.9\\react.core.5.2.9.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",

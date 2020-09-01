@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using JavaScriptEngineSwitcher.V8;
 using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
 using React.AspNet;
+using EventReactApp.Model;
 
 namespace EventReactApp
 {
@@ -39,6 +40,7 @@ namespace EventReactApp
             services.AddJsEngineSwitcher(options => options.DefaultEngineName = V8JsEngine.EngineName)
               .AddV8();
             services.AddMvc();
+            services.AddDbContext<EventAppContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RazorPagesMovieContext"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,7 +64,8 @@ namespace EventReactApp
             {
                 config
                     .AddScript("~/js/remarkable.min.js")
-                    .AddScript("~/js/tutorial.jsx");
+//                    .AddScript("~/js/tutorial.jsx")
+                    .AddScript("~/js/eventlisting.jsx");
             });
             app.UseHttpsRedirection();
             app.UseStaticFiles();

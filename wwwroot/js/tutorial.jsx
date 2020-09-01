@@ -40,6 +40,7 @@
 		return (
 			<div className="commentBox">
 				<h1>Comments</h1>
+				<br />
 				<CommentList data={this.state.data} />
 				<CommentForm onCommentSubmit={this.handleCommentSubmit} />
 			</div>
@@ -125,7 +126,7 @@ class Comment extends React.Component {
 	render() {
 		return (
 			<div className="comment">
-				<h2 className="commentAuthor">{this.props.author}</h2>
+				<h3 className="commentAuthor">{this.props.author}</h3>
 				<span dangerouslySetInnerHTML={this.rawMarkup()} />
 			</div>
 		);

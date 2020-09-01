@@ -1,15 +1,14 @@
-﻿@model IEnumerable<EventReactApp.Models.CommentModel>
+﻿@model IEnumerable<EventReactApp.Models.EventViewModel>
 
-    @Html.React("CommentBox", new
+    @Html.React("EventBox", new
     {
         initialData = Model,
-        url = Url.Action("Comments"),
-        submitUrl = Url.Action("AddComment"),
+        url = Url.Action("eventsListings"),
         pollInterval = 2000,
     })
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.development.js"></script>
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.development.js"></script>
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.0/prop-types.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
-    <script src="@Url.Content("~/js/tutorial.jsx")"></script>
+    <script src="@Url.Content("~/js/eventlisting.jsx")"></script>
     @Html.ReactInitJavaScript()

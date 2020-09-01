@@ -89,9 +89,10 @@ namespace EventReactApp.Controllers
         public ActionResult EventsListings()
         {
             _events = dbContext.Events.ToList();
+            EventViewModel viewModel;
             foreach (Events ev in _events)
             {
-                EventViewModel viewModel = new EventViewModel();
+                viewModel = new EventViewModel();
                 viewModel.Id = ev.EventId;
                 viewModel.Name = ev.EventName;
                 //viewModel.Text = ev.EventKeyword + "\n" + ev.EventSummary + "\n\n";

@@ -1,9 +1,12 @@
-﻿
-
-class EventBox extends React.Component {
+﻿class EventBox extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { data: this.props.initialData };
+		this.state = {
+			data: this.props.initialData,
+			options : [
+				'one', 'two', 'three'
+			]
+		};
 	}
 
 	loadEventItemsFromServer = () => {
@@ -28,6 +31,7 @@ class EventBox extends React.Component {
 		return (
 			<div className="col-md-8">
 				<h1>Events List</h1>
+				
 				<br />
 				<EventList data={this.state.data} />
 			</div>

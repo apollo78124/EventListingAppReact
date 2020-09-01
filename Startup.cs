@@ -37,8 +37,7 @@ namespace EventReactApp
             services.AddReact();
 
             // Make sure a JS engine is registered, or you will get an error!
-            services.AddJsEngineSwitcher(options => options.DefaultEngineName = V8JsEngine.EngineName)
-              .AddV8();
+            services.AddJsEngineSwitcher(options => options.DefaultEngineName = V8JsEngine.EngineName).AddV8();
             services.AddMvc();
             services.AddDbContext<EventAppContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RazorPagesMovieContext"]));
         }
@@ -63,9 +62,16 @@ namespace EventReactApp
             app.UseReact(config =>
             {
                 config
-                    .AddScript("~/js/remarkable.min.js")
-//                    .AddScript("~/js/tutorial.jsx")
+                    
+                    .SetLoadBabel(true)
+  .SetLoadReact(false)
+  .AddScriptWithoutTransform("~/dist/runtime.0b312ce1.js")
+  .AddScriptWithoutTransform("~/dist/vendor.8faee7f5.js")
+  .AddScriptWithoutTransform("~/dist/main.ebc69966.js")
+  .AddScript("~/js/remarkable.min.js")
+                    //                    .AddScript("~/js/tutorial.jsx")
                     .AddScript("~/js/eventlisting.jsx");
+ // .AddScriptWithoutTransform("~/dist/0.c7a05c00.js");
             });
             app.UseHttpsRedirection();
             app.UseStaticFiles();

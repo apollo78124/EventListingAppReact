@@ -10,6 +10,11 @@
     <None Remove="C:\Users\dldms\.nuget\packages\javascriptengineswitcher.v8.native.win-x86\3.5.5\build\netcoreapp3.1\..\..\runtimes\win-x86\native\v8-base-ia32.dll" />
     <None Remove="C:\Users\dldms\.nuget\packages\javascriptengineswitcher.v8.native.win-x86\3.5.5\build\netcoreapp3.1\..\..\runtimes\win-x86\native\v8-ia32.dll" />
     <None Remove="C:\Users\dldms\.nuget\packages\javascriptengineswitcher.v8.native.win-x86\3.5.5\build\netcoreapp3.1\..\..\runtimes\win-x86\native\v8-zlib-ia32.dll" />
+    <None Remove="webpack.config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="webpack.config.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +40,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="React.AspNet" Version="5.2.9" />
+    <PackageReference Include="React.Core" Version="5.2.9" />
   </ItemGroup>
 
 </Project>
